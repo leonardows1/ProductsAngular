@@ -9,15 +9,15 @@ import { Product } from '../../models/product.model';
 export class ProductComponent {
 
   @Input() product: Product = {
-      productId: '',
-      code: '',
-      description: '',
-      imageUrl: 'https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      price: 100,
+    productId: '',
+    code: '',
+    description: '',
+    imagesProduct: [],
+    price: 100,
+    categoryId: '',
+    category: {
       categoryId: '',
-      category: {
-        categoryId: '',
-        name: ''
+      name: ''
     }
   }
 

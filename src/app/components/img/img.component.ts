@@ -10,7 +10,6 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   @Input('img')
   set changeImg(newImg: string) {
     this.img = newImg;
-    console.log('Solo cambia la imagen =>', this.img);
   }
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
@@ -19,16 +18,15 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   //counterFn: number | undefined;
 
   constructor() {
-    console.log('constructor', 'imgValue =>', this.img);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges', 'imgValue =>', this.img);
-    console.log('changes', changes);
+    //console.log('ngOnChanges', 'imgValue =>', this.img);
+    //console.log('changes', changes);
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit', 'imgValue =>', this.img);
+    /*console.log('ngOnInit', 'imgValue =>', this.img);*/
     //this.counterFn = window.setInterval(() => {
     //  this.counter++;
     //  console.log('run counter');
@@ -36,11 +34,11 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
+   /* console.log('ngAfterViewInit');*/
   }
 
   ngOnDestroy() {
-    console.log('ngOnDestroy');
+    /*console.log('ngOnDestroy');*/
     /*window.clearInterval(this.counterFn);*/
   }
 
@@ -49,7 +47,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   }
 
   imgLoaded() {
-    console.log("Log hijo");
+    /*console.log("Log hijo");*/
     this.loaded.emit(this.img);
   }
 }
